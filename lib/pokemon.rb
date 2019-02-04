@@ -25,19 +25,14 @@ class Pokemon
     type = pokemon[2]
 
 
-    new_poke = Pokemon.new(id: id, name: name, type: type, db: database_connection)
+    new_poke = Pokemon.new(id: id, name: name, type: type, hp: hp, db: database_connection)
 
   end
 
-  # def alter_hp(hp_hit, database_connection)
-  #   database_connection.execute("UPDATE pokemon
-  #   SET hp = ?
-  #   WHERE id = ?", hp_hit, @id)
-  # end
-
-  def alter_hp(new_hp, database_connection)
-  database_connection.execute("UPDATE pokemon SET hp = ? WHERE id = ?", new_hp, @id)
-end
-
+  def alter_hp(hp_hit, database_connection)
+    database_connection.execute("UPDATE pokemon
+    SET hp = ?
+    WHERE id = ?", hp_hit, @id)
+  end
 
 end
