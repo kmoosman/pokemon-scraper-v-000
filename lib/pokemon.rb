@@ -35,5 +35,4 @@ class Pokemon
     WHERE id = ?", update_hp, @id)
   end
 
-
 end
