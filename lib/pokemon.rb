@@ -27,7 +27,7 @@ class Pokemon
 
 
 
-    new_poke = Pokemon.new(id: id, name: name, type: type, db: database_connection)
+    new_poke = Pokemon.new(id: id, name: name, hp: hp, type: type, db: database_connection)
 
   end
 
