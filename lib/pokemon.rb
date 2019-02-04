@@ -7,7 +7,7 @@ class Pokemon
   def initialize(id:, name:, type:, db:)
     @id = id
     @name = name
-    @hp = hp
+    # @hp = hp
     @type = type
     @db = db
 
@@ -28,6 +28,11 @@ class Pokemon
 
     new_poke = Pokemon.new(id: id, name: name, hp: hp, type: type, db: database_connection)
 
+  end
+
+  def alter_hp
+    database_connection.execute("UPDATE pokemon 
+    SET hp = 60")
   end
 
 end
