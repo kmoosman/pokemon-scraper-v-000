@@ -31,8 +31,8 @@ class Pokemon
 
   def alter_hp
     database_connection.execute("UPDATE pokemon
-    SET hp = 60
-    WHERE hp = nil")
+    SET hp = 59
+    WHERE hp = 60")
   end
 
 end
