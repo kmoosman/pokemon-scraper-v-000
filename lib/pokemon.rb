@@ -23,6 +23,7 @@ class Pokemon
     pokemon = database_connection.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     name = pokemon[1]
     type = pokemon[2]
+    hp = pokemon[3]
 
 
 
