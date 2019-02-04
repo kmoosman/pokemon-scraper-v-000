@@ -38,8 +38,8 @@ class Pokemon
   # end
 
   def alter_hp(update_hp, database_connection)
-    database_connection.execute("UPDATE pokemon 
-    SET hp = ? 
+    database_connection.execute("UPDATE pokemon
+    SET hp = ?
     WHERE id = ?", update_hp, @id)
   end
 
